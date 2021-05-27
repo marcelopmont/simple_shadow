@@ -4,12 +4,35 @@ A customizable shadow for any widget
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+import:
+``` dart
+import 'package:simple_shadow/simple_shadow.dart';
+```
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
-# simple_shadow
+example:
+```dart
+SimpleShadow(
+    child: Image.asset('images/bird.png'),
+    opacity: 0.6,         // Default: 0.5
+    color: Colors.blue,   // Default: Black
+    offset: Offset(5, 5), // Default: Offset(2, 2)
+    sigma: 7,             // Default: 2
+)
+```
+![](https://github.com/marcelopmont/simple_shadow/blob/main/screenshots/example.png)
+
+### Default
+![](https://github.com/marcelopmont/simple_shadow/blob/main/screenshots/default.png)
+
+### Color: Colors.blue
+![](https://github.com/marcelopmont/simple_shadow/blob/main/screenshots/color_blue.png)
+
+### Opacity: 1
+![](https://github.com/marcelopmont/simple_shadow/blob/main/screenshots/opacity_1.png)
+
+### Sigma: 10
+![](https://github.com/marcelopmont/simple_shadow/blob/main/screenshots/sigma_10.png)
+
+### Offset: Offset(10, 10)
+![](https://github.com/marcelopmont/simple_shadow/blob/main/screenshots/offset_10.png)
+

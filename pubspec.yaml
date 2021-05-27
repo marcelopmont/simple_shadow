@@ -1,8 +1,7 @@
 name: simple_shadow
 description: A customizable shadow for any widget
-version: 0.1.0
-author: Marcelo P. Montanher
-homepage: https://github.com/marcelopmont/simple_shadow.git
+version: 0.2.0
+repository: https://github.com/marcelopmont/simple_shadow.git
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

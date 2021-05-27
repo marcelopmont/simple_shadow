@@ -1,3 +1,3 @@
-## [0.0.1] - TODO: Add release date.
+## [0.1.0] - 26/05/21.
 
-* TODO: Describe initial release.
+* First version with option to customize shadow of any widget

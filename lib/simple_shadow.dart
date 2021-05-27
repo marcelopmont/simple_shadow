@@ -3,14 +3,14 @@ library simple_shadow;
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-class Shadow extends StatelessWidget {
+class SimpleShadow extends StatelessWidget {
   final Widget child;
   final double opacity;
   final double sigma;
   final Color color;
   final Offset offset;
 
-  Shadow({
+  SimpleShadow({
     required this.child,
     this.opacity = 0.5,
     this.sigma = 2,
