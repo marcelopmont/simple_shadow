@@ -25,7 +25,7 @@ class SimpleShadow extends StatelessWidget {
         Transform.translate(
           offset: offset,
           child: ImageFiltered(
-            imageFilter: ImageFilter.blur(sigmaY: sigma, sigmaX: sigma),
+            imageFilter: ImageFilter.blur(sigmaY: sigma, sigmaX: sigma, tileMode: TileMode.decal),
             child: Container(
               decoration: BoxDecoration(
                 border: Border.all(
