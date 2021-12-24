@@ -1,6 +1,6 @@
 name: simple_shadow
 description: A customizable shadow for any widget
-version: 0.2.0
+version: 0.3.0
 repository: https://github.com/marcelopmont/simple_shadow.git
 
 environment:
