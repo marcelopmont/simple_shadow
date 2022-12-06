@@ -35,10 +35,12 @@ class SimpleShadow extends StatelessWidget {
               ),
               child: Opacity(
                 opacity: opacity,
-                child: ColorFiltered(
-                  colorFilter: ColorFilter.mode(color, BlendMode.srcATop),
-                  child: child,
-                ),
+                child: color.alpha == 0
+                    ? child
+                    : ColorFiltered(
+                        colorFilter: ColorFilter.mode(color, BlendMode.srcATop),
+                        child: child,
+                      ),
               ),
             ),
           ),
