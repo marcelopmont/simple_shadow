@@ -1,3 +1,7 @@
+## [0.3.1] - 30/01/23.
+
+* Fix for transparent colors, thanks to @zvikarp
+
 ## [0.3.0] - 24/12/22.
 
 * Fix for new Flutter version, thanks to @northonBarbosa
