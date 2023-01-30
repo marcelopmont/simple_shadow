@@ -22,27 +22,29 @@ class SimpleShadow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-        Transform.translate(
-          offset: offset,
-          child: ImageFiltered(
-            imageFilter: ImageFilter.blur(sigmaY: sigma, sigmaX: sigma, tileMode: TileMode.decal),
-            child: Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.transparent,
-                  width: 0,
+        if (color.alpha != 0)
+          Transform.translate(
+            offset: offset,
+            child: ImageFiltered(
+              imageFilter: ImageFilter.blur(
+                  sigmaY: sigma, sigmaX: sigma, tileMode: TileMode.decal),
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.transparent,
+                    width: 0,
+                  ),
                 ),
-              ),
-              child: Opacity(
-                opacity: opacity,
-                child: ColorFiltered(
-                  colorFilter: ColorFilter.mode(color, BlendMode.srcATop),
-                  child: child,
+                child: Opacity(
+                  opacity: opacity,
+                  child: ColorFiltered(
+                    colorFilter: ColorFilter.mode(color, BlendMode.srcATop),
+                    child: child,
+                  ),
                 ),
               ),
             ),
           ),
-        ),
         child,
       ],
     );
