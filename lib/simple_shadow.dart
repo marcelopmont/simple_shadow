@@ -23,23 +23,28 @@ class SimpleShadow extends StatelessWidget {
     return Stack(
       children: <Widget>[
         if (color.alpha != 0)
-          Transform.translate(
-            offset: offset,
-            child: ImageFiltered(
-              imageFilter: ImageFilter.blur(
-                  sigmaY: sigma, sigmaX: sigma, tileMode: TileMode.decal),
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.transparent,
-                    width: 0,
-                  ),
+          ExcludeSemantics(
+            child: Transform.translate(
+              offset: offset,
+              child: ImageFiltered(
+                imageFilter: ImageFilter.blur(
+                  sigmaY: sigma,
+                  sigmaX: sigma,
+                  tileMode: TileMode.decal,
                 ),
-                child: Opacity(
-                  opacity: opacity,
-                  child: ColorFiltered(
-                    colorFilter: ColorFilter.mode(color, BlendMode.srcATop),
-                    child: child,
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.transparent,
+                      width: 0,
+                    ),
+                  ),
+                  child: Opacity(
+                    opacity: opacity,
+                    child: ColorFiltered(
+                      colorFilter: ColorFilter.mode(color, BlendMode.srcATop),
+                      child: child,
+                    ),
                   ),
                 ),
               ),
@@ -50,4 +55,3 @@ class SimpleShadow extends StatelessWidget {
     );
   }
 }
-
